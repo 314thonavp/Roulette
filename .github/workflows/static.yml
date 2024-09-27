@@ -11,9 +11,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3  
-      
+
+      - name: Set Node.js version
+        run: echo "NODE_VERSION=20" >> $GITHUB_ENV 
+
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4.0.0
+        uses: peaceiris/actions-gh-pages@v4.0.0  
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public/roulette 
