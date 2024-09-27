@@ -16,4 +16,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Path to your HTML files
+          publish_dir: ./public/roulette/index.html
